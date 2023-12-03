@@ -23,8 +23,8 @@ services:
       - model=${MODEL_BIN} # using variable from .env file
       - inference_mode=cpu
     volumes:
-      - './gpt4all_api/app:/app'
-      - './gpt4all_api/models:/models' # models are mounted in the container
+      - './app:/app'
+      - './models:/models' # models are mounted in the container
     command: ["/start-reload.sh"]
 ```
 
